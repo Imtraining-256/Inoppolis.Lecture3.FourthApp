@@ -1,5 +1,5 @@
 /**
- * Calss for exception handling
+ * Class for exception handling
  */
 public class Main {
     /**
@@ -9,6 +9,10 @@ public class Main {
     public static void main(String[] args) {
         Thrower thrower = new Thrower();
 
-        System.out.println(thrower.readLine());
+        try {
+            thrower.throwCustomException();
+        } catch (CustomException e) {
+            System.out.println(e.exception);
+        }
     }
 }
